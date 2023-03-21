@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>FAQ Accordion Card</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="image">
+      <img src="./images/illustration-woman-online-desktop.svg" alt="" id="coverImage">
+      <img src="./images/illustration-box-desktop.svg" alt="" id="box">
+      <img src="./images/bg-pattern-desktop.svg" alt="" class="bg">
+    </section>
+    <section class="faq">
+      <h1>FAQ</h1>
+      <article class="card">
+        <button class="toggle" id="b1">
+        <section class="card__title">
+          <h2>
+            How many team members can I invite?
+          </h2>
+            <img src="./images/icon-arrow-down.svg" alt="">
+          </section>
+        </button>
+        <section class="card__content" id="c1">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is no limit on 
+            team members for the Premium plan.
+          </p>
+        </section>
+      </article>
+  <hr/>
+
+      <article class="card">
+        <button class="toggle" id="b2">
+        <section class="card__title">
+        <h2>What is the maximum file upload size? </h2>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </section>
+      </button>
+        <section class="card__content" id="c2">
+          <p> No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </section>
+      </article>
+  <hr/>
+      <article class="card">
+        <button class="toggle" id="b3">
+        <section class="card__title">
+        <h2>How do I reset my password?</h2>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </section>
+      </button>
+        <section class="card__content" id="c3">
+          <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.</p>
+        </section>
+      </article>
+  <hr/>
+      <article class="card">
+        <button class="toggle" id="b4">
+        <section class="card__title">
+        <h2>Can I cancel my subscription? </h2>
+          <img src="./images/icon-arrow-down.svg" alt="">
+          
+        </section>
+      </button>
+        <section class="card__content" id="c4">
+          <p>Yes! Send us a message and we’ll process your request no questions asked. </p>
+        </section>
+      </article>
+  <hr/>
+      <article class="card">
+        <button class="toggle" id="b5">
+        <section class="card__title">
+        <h2>  Do you provide additional support? </h2>
+          <img src="./images/icon-arrow-down.svg" alt="">
+        </section>
+      </button>
+        <section class="card__content" id="c5">
+          <p>Chat and email support is available 24/7. Phone lines are open during normal business hours. </p>
+        </section>
+      </article>
+  <hr/>
+
+    </section>
+   
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script>
+    let toggleState = false;
+    const togglers = document.querySelectorAll('.toggle')
+    togglers.forEach(btn=>{
+      btn.addEventListener('click',(e)=>{
+        console.log(e.currentTarget.id)
+        const targetId = `c${e.currentTarget.id[1]}`
+        const card = document.querySelector(`#${targetId}`)
+        card.classList.toggle('show')
+        if(card.classList.contains('show')){
+        card.style.display='flex'
+        card.style.height='max-content'
+        }else{
+         card.style.display='none'
+        }
+      })
+    })
+  </script>
+</body>
+</html>
