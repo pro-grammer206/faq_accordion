@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/pro-grammer206/faq_accordion)
+- Live Site URL: [Live page link](https://pro-grammer206.github.io/faq_accordion/)
 
 ## My process
 
